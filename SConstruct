@@ -34,5 +34,5 @@ else:
         Exit(1)
     conf.Finish()
 
-env.Append(CPPPATH=["../../src"])
+env.Append(CPPPATH=["../../common"])
 env.SharedLibrary("neon_curses", "curses.cpp")
