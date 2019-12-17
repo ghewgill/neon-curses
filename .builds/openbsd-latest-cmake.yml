@@ -1,0 +1,10 @@
+image: openbsd/latest
+packages:
+- cmake
+sources:
+- https://github.com/ghewgill/neon-curses
+tasks:
+- build: |
+    cd neon-curses
+    cmake .
+    cmake --build .

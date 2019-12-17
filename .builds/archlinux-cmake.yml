@@ -1,0 +1,11 @@
+image: archlinux
+packages:
+- cmake
+- ncurses
+sources:
+- https://github.com/ghewgill/neon-curses
+tasks:
+- build: |
+    cd neon-curses
+    cmake .
+    cmake --build .
