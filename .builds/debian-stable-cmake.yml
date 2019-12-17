@@ -1,0 +1,11 @@
+image: debian/stable
+packages:
+- cmake
+- ncurses-dev
+sources:
+- https://github.com/ghewgill/neon-curses
+tasks:
+- build: |
+    cd neon-curses
+    cmake .
+    cmake --build .

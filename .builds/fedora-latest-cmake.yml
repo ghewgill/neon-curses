@@ -1,0 +1,12 @@
+image: fedora/latest
+packages:
+- g++
+- cmake
+- ncurses-devel
+sources:
+- https://github.com/ghewgill/neon-curses
+tasks:
+- build: |
+    cd neon-curses
+    cmake .
+    cmake --build .
