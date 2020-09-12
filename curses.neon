@@ -1,9 +1,10 @@
---  File: curses
---
---  Curses library for text-oriented user interface support.
---
---  Reference:
---      https://en.wikipedia.org/wiki/Curses_%28programming_library%29
+/*  File: curses
+ *
+ *  Curses library for text-oriented user interface support.
+ *
+ *  Reference:
+ *      https://en.wikipedia.org/wiki/Curses_%28programming_library%29
+ */
 
 EXPORT Window
 
@@ -341,10 +342,11 @@ DECLARE EXTENSION CONSTANT CURSES_OK: Number
 
 TYPE Window IS POINTER
 
-------------------------------------------------------------------------
---
---  Video Attributes
---
+/*----------------------------------------------------------------------
+ *
+ *  Video Attributes
+ *
+ */
 
 DECLARE EXTENSION CONSTANT A_CHARTEXT         : Number
 DECLARE EXTENSION CONSTANT A_NORMAL           : Number
@@ -358,10 +360,11 @@ DECLARE EXTENSION CONSTANT A_ATTRIBUTES       : Number
 DECLARE EXTENSION CONSTANT A_COLOR            : Number
 DECLARE EXTENSION CONSTANT A_PROTECT          : Number
 
-------------------------------------------------------------------------
---
---  Box drawing characters
---
+/*----------------------------------------------------------------------
+ *
+ *  Box drawing characters
+ *
+ */
 
 DECLARE EXTENSION FUNCTION ACS_ULCORNER(): Number
 DECLARE EXTENSION FUNCTION ACS_LLCORNER(): Number
@@ -375,10 +378,11 @@ DECLARE EXTENSION FUNCTION ACS_HLINE(): Number
 DECLARE EXTENSION FUNCTION ACS_VLINE(): Number
 DECLARE EXTENSION FUNCTION ACS_PLUS(): Number
 
-------------------------------------------------------------------------
---
---  Color Constants
---
+/*----------------------------------------------------------------------
+ *
+ *  Color Constants
+ *
+ */
 
 DECLARE EXTENSION CONSTANT COLOR_BLACK        : Number
 DECLARE EXTENSION CONSTANT COLOR_BLUE         : Number
@@ -389,10 +393,11 @@ DECLARE EXTENSION CONSTANT COLOR_MAGENTA      : Number
 DECLARE EXTENSION CONSTANT COLOR_YELLOW       : Number
 DECLARE EXTENSION CONSTANT COLOR_WHITE        : Number
 
-------------------------------------------------------------------------
---
---  Keyboard, and Key Definitions.
---
+/*----------------------------------------------------------------------
+ *
+ *  Keyboard, and Key Definitions.
+ *
+ */
 
 DECLARE EXTENSION CONSTANT KEY_CODE_YES       : Number -- If get_wch() gives a key code
 
@@ -486,10 +491,11 @@ DECLARE EXTENSION CONSTANT KEY_UNDO           : Number -- undo key
 DECLARE EXTENSION CONSTANT KEY_MIN            : Number -- Minimum curses key value
 DECLARE EXTENSION CONSTANT KEY_MAX            : Number -- Maximum curses key
 
-------------------------------------------------------------------------
---
---  Curses functions
---
+/*----------------------------------------------------------------------
+ *
+ *  Curses functions
+ *
+ */
 
 DECLARE EXTENSION FUNCTION COLOR_PAIR(n: Number): Number
 DECLARE EXTENSION FUNCTION Cols(): Number
