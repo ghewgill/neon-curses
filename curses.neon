@@ -340,7 +340,7 @@ EXPORT wtouchln
 DECLARE EXTENSION CONSTANT CURSES_ERR: Number
 DECLARE EXTENSION CONSTANT CURSES_OK: Number
 
-TYPE Window IS POINTER
+TYPE Window IS Object
 
 /*----------------------------------------------------------------------
  *
@@ -533,10 +533,10 @@ DECLARE EXTENSION FUNCTION box(win: Window, verch: Number, horch: Number)
 DECLARE EXTENSION FUNCTION can_change_color(): Boolean
 DECLARE EXTENSION FUNCTION cbreak()
 DECLARE EXTENSION FUNCTION nocbreak()
-DECLARE EXTENSION FUNCTION chgat(n: Number, attr: Number, color: Number, opts: POINTER)
-DECLARE EXTENSION FUNCTION wchgat(win: Window, n: Number, attr: Number, color: Number, opts: POINTER)
-DECLARE EXTENSION FUNCTION mvchgat(y: Number, x: Number, n: Number, attr: Number, color: Number, opts: POINTER)
-DECLARE EXTENSION FUNCTION mvwchgat(win: Window, y: Number, x: Number, n: Number, attr: Number, color: Number, opts: POINTER)
+DECLARE EXTENSION FUNCTION chgat(n: Number, attr: Number, color: Number, opts: Object)
+DECLARE EXTENSION FUNCTION wchgat(win: Window, n: Number, attr: Number, color: Number, opts: Object)
+DECLARE EXTENSION FUNCTION mvchgat(y: Number, x: Number, n: Number, attr: Number, color: Number, opts: Object)
+DECLARE EXTENSION FUNCTION mvwchgat(win: Window, y: Number, x: Number, n: Number, attr: Number, color: Number, opts: Object)
 DECLARE EXTENSION FUNCTION clear()
 DECLARE EXTENSION FUNCTION wclear(win: Window)
 DECLARE EXTENSION FUNCTION clearok(win: Window, bf: Boolean)
@@ -545,8 +545,8 @@ DECLARE EXTENSION FUNCTION wclrtobot(win: Window)
 DECLARE EXTENSION FUNCTION clrtoeol()
 DECLARE EXTENSION FUNCTION wclrtoeol(win: Window)
 DECLARE EXTENSION FUNCTION color_content(color: Number): Array<Number>
-DECLARE EXTENSION FUNCTION color_set(color_pair_number: Number, opts: POINTER)
-DECLARE EXTENSION FUNCTION wcolor_set(win: Window, color_pair_number: Number, opts: POINTER)
+DECLARE EXTENSION FUNCTION color_set(color_pair_number: Number, opts: Object)
+DECLARE EXTENSION FUNCTION wcolor_set(win: Window, color_pair_number: Number, opts: Object)
 DECLARE EXTENSION FUNCTION copywin(srcwin: Window, dstwin: Window, sminrow: Number, smincol: Number, dminrow: Number, dmincol: Number, dmaxrow: Number, dmaxcol: Number, overlay: Boolean)
 DECLARE EXTENSION FUNCTION curs_set(visibility: Number)
 DECLARE EXTENSION FUNCTION curscr(): Window
